@@ -1,0 +1,309 @@
+/*--------------------------------------------------------------------- 
+File Name: responsive.css 
+---------------------------------------------------------------------*/
+
+@media (min-width: 1343px) and (max-width: 1500px) {
+    .full_bg {
+        height: 100%;
+    }
+    #banner1 .carousel-control-next {
+        right: 43.7%;
+    }
+    #myCarousel .carousel-control-next {
+        right: 43.7%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1342px) {
+    .full_bg {
+        height: 100%;
+    }
+    #banner1 .carousel-control-next {
+        right: 42.1%;
+    }
+    #myCarousel .carousel-control-next {
+        right: 42.1%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .full_bg {
+        height: 100%;
+    }
+    .site-navbar ul li {
+        padding-right: 57px;
+    }
+    .mar_right {
+        margin-right: 0;
+    }
+    .creative .read_more {
+        max-width: 185px;
+        margin-right: 0;
+    }
+    #banner1 .carousel-control-next {
+        right: 39.1%;
+    }
+    #myCarousel .carousel-control-next {
+        right: 39.1%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .full_bg {
+        height: 100%;
+    }
+    .site-navbar ul li {
+        padding-right: 31px;
+    }
+    .mar_right {
+        margin-right: 0;
+    }
+    .creative h1 {
+        font-size: 56px;
+        line-height: 70px;
+    }
+    .creative p {
+        padding: 5px 0 15px 0;
+    }
+    .creative .read_more {
+        max-width: 142px;
+        margin-right: 0;
+    }
+    #banner1 .carousel-control-next {
+        right: 39.1%;
+    }
+    #banner1 .carousel-control-prev {
+        left: 40.7%;
+    }
+    #myCarousel .carousel-control-next {
+        right: 39.1%;
+    }
+    #myCarousel .carousel-control-prev {
+        left: 40.7%;
+    }
+    .titlepage h2 {
+        font-size: 37px;
+        line-height: 45px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .full_bg {
+        height: 100%;
+    }
+    .grid {
+        display: grid;
+    }
+    .order {
+        order: -1;
+    }
+    .mar_right {
+        margin-right: 0px;
+    }
+    .about_img,
+    .agency {
+        margin-top: 30px;
+    }
+    #banner1 .carousel-control-prev,
+    #banner1 .carousel-control-next {
+        top: 103%;
+    }
+    #banner1 .carousel-control-next {
+        right: 36.7%;
+    }
+    #banner1 .carousel-control-prev {
+        left: 36.7%;
+    }
+    #myCarousel .carousel-control-prev,
+    #myCarousel .carousel-control-next {
+        top: 108%;
+    }
+    #myCarousel .carousel-control-next {
+        right: 36.7%;
+    }
+    #myCarousel .carousel-control-prev {
+        left: 36.7%;
+    }
+    .titlepage h2 {
+        font-size: 37px;
+        line-height: 45px;
+    }
+    .pro_file span {
+        padding-bottom: 30px;
+    }
+    .d_none {
+        display: none !important;
+    }
+    .agency {
+        margin-top: 30px;
+    }
+    .latest {
+        max-width: 377px;
+        margin: 0 auto;
+        margin-bottom: 55px;
+    }
+    /* navbar css for mobile start */
+    .nav-toggler {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        z-index: 99999;
+    }
+    .site-navbar {
+        position: relative;
+        min-height: 60px;
+    }
+    .site-navbar ul {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 8px);
+        width: min(280px, calc(100vw - 30px));
+        flex-direction: column;
+        align-items: stretch;
+        background-color: #fff;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .3s ease;
+        z-index: 99999;
+        box-shadow: 0 10px 20px rgba(18, 59, 45, 0.12);
+        border-radius: 0 0 18px 18px;
+        padding: 0;
+    }
+    .site-navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+    .site-navbar ul li a {
+        display: block;
+        padding: 14px 20px;
+        border-radius: 0;
+    }
+    .site-navbar ul.open {
+        max-height: 500px;
+        opacity: 1;
+        padding-top: 8px;
+        overflow: hidden;
+        border-radius: 0 0 18px 18px;
+    }
+    /* navbar css for mobile end */
+}
+
+@media (max-width: 575px) {
+    .full_bg {
+        height: 100%;
+    }
+    .slider_main {
+        padding: 0px 0 0px 0;
+    }
+    .logo {
+        text-align: left;
+    }
+    .about_img,
+    .agency {
+        margin-top: 30px;
+    }
+    .creative .read_more {
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+    .mar_right {
+        margin-right: 0px;
+    }
+    #banner1 .carousel-control-prev,
+    #banner1 .carousel-control-next {
+        top: 103%;
+    }
+    #banner1 .carousel-control-next {
+        right: 25.7%;
+    }
+    #banner1 .carousel-control-prev {
+        left: 25.7%;
+    }
+    #myCarousel .carousel-control-prev,
+    #myCarousel .carousel-control-next {
+        top: 108%;
+    }
+    #myCarousel .carousel-control-next {
+        right: 25.7%;
+    }
+    #myCarousel .carousel-control-prev {
+        left: 25.7%;
+    }
+    .titlepage h2 {
+        font-size: 37px;
+        line-height: 45px;
+    }
+    .pro_file span {
+        padding-bottom: 30px;
+    }
+    .grid {
+        display: grid;
+    }
+    .order {
+        order: -1;
+    }
+    .latest {
+        max-width: 317px;
+        margin: 0 auto;
+        margin-bottom: 55px;
+    }
+    .titlepage h2 {
+        line-height: 40px;
+        font-size: 28px;
+    }
+    .d_none {
+        display: none !important;
+    }
+    /* navbar css for mobile start */
+    .navbar-area {
+        margin-top: -67px;
+    }
+    .nav-toggler {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        z-index: 99999;
+    }
+    .site-navbar {
+        position: relative;
+        min-height: 60px;
+    }
+    .site-navbar ul {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 8px);
+        width: min(280px, calc(100vw - 30px));
+        flex-direction: column;
+        align-items: stretch;
+        background-color: #fff;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .3s ease;
+        z-index: 99999;
+        box-shadow: 0 10px 20px rgba(18, 59, 45, 0.12);
+        border-radius: 0 0 18px 18px;
+        padding: 0;
+    }
+    .site-navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+    .site-navbar ul li a {
+        display: block;
+        padding: 14px 20px;
+        border-radius: 0;
+    }
+    .site-navbar ul.open {
+        max-height: 500px;
+        opacity: 1;
+        padding-top: 8px;
+        overflow: hidden;
+        border-radius: 0 0 18px 18px;
+    }
+}

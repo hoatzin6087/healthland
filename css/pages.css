@@ -1,0 +1,69 @@
+:root { --forest: #123d32; --forest-deep: #092a23; --gold: #c6a15b; --gold-light: #e4c886; --ivory: #fbfaf6; --ink: #17342d; --muted: #68766f; }
+body { background: var(--ivory); color: var(--muted); font-family: 'Manrope', sans-serif; font-weight: 500; letter-spacing: .01em; margin: 0; overflow-x: hidden; }
+.page-header { background: var(--forest-deep); border-top: 5px solid var(--gold); border-bottom: 1px solid rgba(228,200,134,.5); padding: 14px 0; }
+.page-header .inner { align-items: center; display: flex; justify-content: space-between; margin: auto; max-width: 1120px; padding: 0 20px; }
+.brand { align-items: center; color: #fff; display: flex; font-family: 'Manrope', sans-serif; font-size: 31px; font-weight: 600; gap: 12px; line-height: 1; text-decoration: none; }
+.brand img { background: #fff; border: 1px solid var(--gold-light); border-radius: 12px; height: 56px; padding: 3px; width: 56px; }
+.brand small { color: var(--gold-light); display: block; font-family: 'Manrope', sans-serif; font-size: 9px; letter-spacing: .22em; margin-top: 5px; text-transform: uppercase; }
+.page-nav { display: flex; flex-wrap: wrap; gap: 24px; justify-content: flex-end; }
+.page-nav a { color: rgba(255,255,255,.82); font-size: 11px; font-weight: 600; letter-spacing: .13em; text-decoration: none; text-transform: uppercase; }
+.page-nav a:hover { color: var(--gold-light); }
+.page-hero { background: linear-gradient(90deg, rgba(9,42,35,.95), rgba(9,42,35,.68)), var(--page-hero-bg, url('../images/spa_massage_services_wall.png')) center/cover no-repeat; border-bottom: 1px solid var(--gold); color: #fff; padding: 92px 20px; }
+.page-hero .inner, .page-main { margin: auto; max-width: 1600px; }
+.page-hero .inner::after { color: var(--gold-light); content: 'Professional spa treatments at Marco Polo 4-star hotel Deira Dubai'; display: block; font-size: 11px; font-weight: 700; letter-spacing: .11em; margin-top: 25px; text-transform: uppercase; }
+.page-hero.ayurvedic-hero { --page-hero-bg: url('../images/massage_services/ayurvedic_massage-deira_dubai.png'); }
+.page-hero.aroma-hero { --page-hero-bg: url('../images/massage_services/aroma_massage-spa_deira_dubai.png'); }
+.page-hero.swedish-hero { --page-hero-bg: url('../images/swedish-massage.jpg'); }
+.page-hero.moroccan-hero { --page-hero-bg: url('../images/massage_services/moroccan_bath_massage_spa-deira_dubai.png'); }
+.page-hero.four-hand-hero { --page-hero-bg: url('../images/four-hand-massage.jpg'); }
+.page-hero.thai-hero { --page-hero-bg: url('../images/thai-spot-massage.jpg'); }
+.page-hero.full-body-hero { --page-hero-bg: url('../images/head-to-toe-massage.jpg'); }
+.page-hero.jacuzzi-hero { --page-hero-bg: url('../images/jacuzzi-massage.jpg'); }
+.eyebrow { color: var(--gold-light); font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
+.page-hero h1, .page-main h2 { color: #fff; font-family: 'Manrope', sans-serif; font-size: clamp(45px, 6vw, 76px); font-weight: 600; line-height: 1.02; text-rendering: optimizeLegibility; margin: 18px 0; }
+.page-main { padding: 76px 20px; }
+.page-main h2 { color: var(--ink); font-size: 46px; }
+.page-main h3 { color: var(--ink); font-family: 'Manrope', sans-serif; font-size: 30px; font-weight: 600; line-height: 1.15; }
+.page-hero h1,
+.page-main h2,
+.page-main h3,
+.brand { font-family: 'Manrope', sans-serif; font-weight: 700; }
+.page-main p, .page-main li { font-size: 16px; font-weight: 500; line-height: 1.95; }
+.page-main ul { padding-left: 22px; }
+.premium-grid { display: grid; gap: 24px; grid-template-columns: repeat(3, 1fr); }
+.premium-card { background: #fff; border: 1px solid rgba(198,161,91,.6); border-radius: 16px; box-shadow: 0 14px 30px rgba(18,61,50,.08); padding: 28px; position: relative; }
+.premium-card::before { border: 1px solid rgba(198,161,91,.26); border-radius: 11px; content: ''; inset: 5px; pointer-events: none; position: absolute; }
+.premium-card > * { position: relative; }
+.premium-card h2 { font-size: 30px; margin-top: 0; }
+.premium-card a { color: var(--forest-soft, #1e5948); font-weight: 700; text-decoration: none; }
+.service-directory { background: #fff; max-width: none; padding: 70px max(20px, calc((100% - 1160px) / 2)); }
+.service-panel { align-items: center; background: var(--forest-deep); border: 1px solid rgba(198,161,91,.35); border-radius: 18px; box-shadow: 0 18px 45px rgba(18,61,50,.18); display: grid; gap: clamp(28px, 5vw, 58px); grid-template-columns: minmax(300px, 1fr) minmax(320px, 1fr); margin: 0 auto 34px; max-width: 1160px; overflow: hidden; padding: 34px; position: relative; }
+.service-panel::before { border: 1px solid rgba(198,161,91,.14); border-radius: 13px; content: ''; inset: 7px; pointer-events: none; position: absolute; }
+.service-panel.reverse .service-panel-image { order: 2; }
+.service-panel.reverse .service-panel-content { order: 1; }
+.service-panel-image { border: 1px solid rgba(228,200,134,.65); border-radius: 14px; box-shadow: 0 0 0 5px rgba(198,161,91,.08); overflow: hidden; position: relative; z-index: 1; }
+.service-panel-image img { display: block; height: auto; object-fit: contain; object-position: center; transition: transform .8s cubic-bezier(.22,.61,.36,1); width: 100%; }
+.service-panel:hover .service-panel-image img { transform: scale(1.02); }
+.service-panel-content { color: rgba(255,255,255,.78); min-width: 0; position: relative; z-index: 1; }
+.service-number { color: var(--gold-light); font-size: 11px; font-weight: 700; letter-spacing: .2em; }
+.service-panel h2 { color: #f4d9a0; font-size: clamp(30px, 4vw, 46px); line-height: 1.08; margin: 12px 0 18px; }
+.service-panel h3 { color: #fff; font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: .12em; margin: 22px 0 8px; text-transform: uppercase; }
+.service-panel p, .service-panel li { color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.75; }
+.service-panel ul { margin: 0; padding-left: 18px; }
+.service-panel li::marker { color: var(--gold); }
+.service-session { border-left: 2px solid var(--gold); color: var(--gold-light) !important; font-size: 12px !important; font-weight: 700; letter-spacing: .04em; margin-top: 20px; padding-left: 12px; }
+.service-panel .action-row { margin-top: 18px; }
+.service-panel .action { display: inline-block; padding: 13px 16px; }
+.detail-layout { align-items: start; display: grid; gap: 50px; grid-template-columns: 1.1fr .9fr; }
+.detail-image { border: 1px solid var(--gold); border-radius: 18px; box-shadow: 12px 12px 0 rgba(198,161,91,.24); overflow: hidden; }
+.detail-image img { display: block; height: auto; object-fit: contain; width: 100%; }
+.detail-card { border: 1px solid var(--gold); border-radius: 18px; box-shadow: 12px 12px 0 rgba(198,161,91,.24); overflow: hidden; }
+.detail-card img { display: block; height: auto; object-fit: contain; width: 100%; }
+.session-badge { background: var(--forest); border: 1px solid var(--gold-light); border-radius: 12px; color: #fff; display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .14em; padding: 13px 18px; text-transform: uppercase; }
+.action-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.action { background: var(--gold); border: 1px solid var(--gold-light); border-radius: 9px; color: var(--forest-deep); font-size: 11px; font-weight: 700; letter-spacing: .13em; padding: 16px 22px; text-decoration: none; text-transform: uppercase; }
+.action.whatsapp { background: #238b5b; color: #fff; }
+.page-footer { background: var(--forest-deep); border-top: 1px solid var(--gold); color: rgba(255,255,255,.68); padding: 32px 20px; }
+.page-footer .inner { align-items: center; display: flex; justify-content: space-between; margin: auto; max-width: 1120px; }
+.page-footer a { color: var(--gold-light); text-decoration: none; }
+@media (max-width: 700px) { .page-header .inner, .page-footer .inner { align-items: flex-start; flex-direction: column; gap: 18px; } .page-nav { gap: 13px; justify-content: flex-start; } .premium-grid, .detail-layout, .service-panel { grid-template-columns: minmax(0, 1fr); } .page-hero { padding: 65px 20px; } .page-main { padding: 54px 20px; } .service-directory { padding: 42px 14px; } .service-panel { gap: 24px; min-width: 0; padding: 22px; } .service-panel.reverse .service-panel-image, .service-panel.reverse .service-panel-content { order: initial; } .service-panel-image, .service-panel-image img { max-width: 100%; } .service-panel-image img { height: auto; } .detail-image img, .detail-card img { height: auto; } }
