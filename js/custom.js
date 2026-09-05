@@ -139,6 +139,68 @@ $(document).ready(function () {
 // owl-carousel
 var staffCarousel = $('.staff-grid.owl-carousel');
 
+var openingOffer = document.getElementById('opening-offer');
+var openingOfferImage = document.getElementById('opening-offer-image');
+var openingOfferTitle = document.getElementById('opening-offer-title');
+var openingOfferDescription = document.getElementById('opening-offer-description');
+var openingOfferTimer = document.getElementById('opening-offer-timer');
+var openingOfferIndex = 0;
+var openingOfferSeconds = 2 * 60 * 60;
+var openingOfferSlides = [
+  { image: 'images/popup_offer-1_moroccan_bath_deira_dubai.png', title: 'Refresh your routine', description: 'Unwind with a traditional Moroccan bath and attentive spa care.' },
+  { image: 'images/popup_offer-2_jacuzzi_bath_deira_dubai.png', title: 'Settle into comfort', description: 'Relax with a soothing Jacuzzi bath experience at our Deira spa.' },
+  { image: 'images/popup_offer-3_full_body_massage_dubai.png', title: 'Relax from head to toe', description: 'Enjoy a restorative full body massage at Health Land Spa in Dubai.' }
+];
+
+function updateOpeningOfferSlide(index) {
+  openingOfferIndex = (index + openingOfferSlides.length) % openingOfferSlides.length;
+  var slide = openingOfferSlides[openingOfferIndex];
+  openingOfferImage.src = slide.image;
+  openingOfferImage.alt = slide.title + ' at Health Land Spa';
+  openingOfferTitle.textContent = slide.title;
+  openingOfferDescription.textContent = slide.description;
+}
+
+function updateOpeningOfferTimer() {
+  var hours = Math.floor(openingOfferSeconds / 3600);
+  var minutes = Math.floor((openingOfferSeconds % 3600) / 60);
+  var seconds = openingOfferSeconds % 60;
+  openingOfferTimer.textContent = [hours, minutes, seconds].map(function (value) {
+    return String(value).padStart(2, '0');
+  }).join(':');
+  if (openingOfferSeconds > 0) openingOfferSeconds -= 1;
+}
+
+function closeOpeningOffer() {
+  openingOffer.classList.remove('is-open');
+  openingOffer.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('opening-offer-open');
+}
+
+if (openingOffer) {
+  document.querySelectorAll('[data-offer-close]').forEach(function (element) {
+    element.addEventListener('click', closeOpeningOffer);
+  });
+  document.querySelector('.opening-offer-prev').addEventListener('click', function () {
+    updateOpeningOfferSlide(openingOfferIndex - 1);
+  });
+  document.querySelector('.opening-offer-next').addEventListener('click', function () {
+    updateOpeningOfferSlide(openingOfferIndex + 1);
+  });
+  updateOpeningOfferTimer();
+  window.setInterval(updateOpeningOfferTimer, 1000);
+  window.setInterval(function () {
+    if (openingOffer.classList.contains('is-open')) {
+      updateOpeningOfferSlide(openingOfferIndex + 1);
+    }
+  }, 4500);
+  window.setTimeout(function () {
+    openingOffer.classList.add('is-open');
+    openingOffer.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('opening-offer-open');
+  }, 700);
+}
+
 staffCarousel.owlCarousel({
   loop: true,
   slideBy: 1,
