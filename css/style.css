@@ -369,7 +369,8 @@ button {
     cursor: pointer;
     height: 39px;
     display: none;
-    z-index: 99999;
+    position: relative;
+    z-index: 1;
 }
 
 .nav-toggler span,
@@ -1888,7 +1889,13 @@ body.staff-lightbox-open { overflow: hidden; }
     position: fixed;
     transition: opacity .3s ease;
     visibility: hidden;
-    z-index: 2100;
+    z-index: 2147483647 !important;
+}
+
+body.opening-offer-open .nav-toggler {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
 
 .opening-offer.is-open {
